@@ -3,7 +3,7 @@ GitHubLink:https://github.com/BARANIDHARAN-S-Git/Player-and-Team
 
 Step1:create a class Player with the Player Id,Player Name,Player Age as properties.
 
-Step2:create a Interface ITeam with the interface members, 
+Step2:create a Interface ITeam and declare functions as, 
        void Add(Player player);
 
         void Remove(int Id);
