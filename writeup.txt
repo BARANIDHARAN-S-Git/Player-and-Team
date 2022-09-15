@@ -1,0 +1,35 @@
+GitHubLink:https://github.com/BARANIDHARAN-S-Git/Player-and-Team
+
+
+Step1:create a class Player with the Player Id,Player Name,Player Age as properties.
+
+Step2:create a Interface ITeam with the interface members, 
+       void Add(Player player);
+
+        void Remove(int Id);
+
+        Player GetPlayerById(int PlayerId);
+
+        Player GetPlayerByName(string PlayerName);
+
+       List<Player> GetAllPlayers();
+
+Step3:Create a derived class OneDayTeam to implement the ITeam interface functionalities.
+
+Step4:In the class Program on Main function ,I  have created a Menu where the user can select any option as shown in menu.
+
+Step5:In the Menu it has the option of To add player in the team,remove player from the team,get the player details by passing the player Id,
+Get the player details by passing the Player Name and get the details of all players.
+
+Step6:If the user wants to add the player,he can select the option of add the player and give the player Id,Name and Age to add.In OneDayTeam class,
+I have given the capacity of the Team be 11 and I have given a count to increment if the players added and decrement when players removed.
+
+Step7:It has the condition to check that the count is less than capacity(i.e capacity=11).
+
+Step8:Suppose if the count is greater than the capacity the new players details will not be added in the list, 
+Instead it shows the message like"Sorry,Player is not able to add because the maximum limit to add Player is 11,you have exceeded the Limit."
+
+Step9:After the completion of this,It asks to the user that we want to again continue this process or Exit the process.
+
+Step10:Ifthe user wants to continue the process The user can select "yes Or YES" to contiue the process and again select any option as shown in th menu,
+or else the user want to end the process the user can select "no Or NO" and end the process.

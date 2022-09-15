@@ -1,0 +1,363 @@
+GitHubLink:https://github.com/BARANIDHARAN-S-Git/Player-and-Team
+-------------------------------------Program.cs--------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PlayerandTeam
+{
+    public  class Program
+    {
+        static void Main(string[] args)
+        {
+            OneDayTeam o = new OneDayTeam();
+          
+            bool loop = false;
+            
+            do
+            {
+                
+                Console.WriteLine("Enter any option shown in the Menu : ");
+                Console.WriteLine("Enter 1:To Add Player 2:To Remove Player by Id 3:Get Player By Id 4:Get player by Name  5:Get All Players");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Player p = new Player();
+                        Console.Write("Enter Player Id : ");
+                        p.PlayerId = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Enter Player Name : ");
+                        p.PlayerName = Console.ReadLine();
+                        Console.Write("Enter Player Age : ");
+                        p.PlayerAge = Convert.ToInt32(Console.ReadLine());
+                        o.Add(p);
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter player Id to Remove");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        o.Remove(a);
+                        break;
+                    case 3:
+                        Player p1 = new Player();
+                        Console.WriteLine("Enter the player Id to know the player Details");
+                        int b = Convert.ToInt32(Console.ReadLine());
+
+                        p1 = o.GetPlayerById(b);
+                        Console.WriteLine("Player Id : "+p1.PlayerId);
+                        Console.WriteLine("Player Name : "+p1.PlayerName);
+                        Console.WriteLine("Player Age : "+p1.PlayerAge);
+                        Console.WriteLine(" ");
+                        break;
+                    case 4:
+                        Player p2 = new Player();
+                        Console.WriteLine("Enter the player Name to know the player Details");
+                        string b1 = Console.ReadLine();
+
+                        p2 = o.GetPlayerByName(b1);
+                        Console.WriteLine(p2.PlayerAge);
+                        Console.WriteLine(p2.PlayerName);
+                        Console.WriteLine(p2.PlayerAge);
+                        Console.WriteLine(" ");
+                        break;
+                    case 5:
+                       List<Player> list = new List<Player>();
+                        list=o.GetAllPlayers();
+                        foreach (var item in list)
+                        {
+                            Console.WriteLine("Player Id : "+item.PlayerId);
+                            Console.WriteLine("Player Name : "+item.PlayerName);
+                            Console.WriteLine("Player Age : "+item.PlayerAge);
+                            Console.WriteLine(" ");
+
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Incoorect option ");
+                        
+                        break;
+                }
+
+
+                        Console.WriteLine("Do yo want to continue yes/no ?");
+                        string s = Console.ReadLine();
+                        if (s == "yes")
+                        {
+                            loop = false;
+                        }
+                        else if(s== "no")
+                        {
+                            loop = true;
+                        }
+                else
+                {
+                    Console.WriteLine("Invalid Input");
+                    loop = true;
+                }
+            } while (!loop);
+
+
+            Console.WriteLine("Thanlyou,Loop ended");
+
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+------------------------------------------------player.cs--------------------------------------------------------
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PlayerandTeam
+{
+    public  class Program
+    {
+        static void Main(string[] args)
+        {
+            OneDayTeam o = new OneDayTeam();
+          
+            bool loop = false;
+            
+            do
+            {
+                
+                Console.WriteLine("Enter any option shown in the Menu : ");
+                Console.WriteLine("Enter 1:To Add Player 2:To Remove Player by Id 3:Get Player By Id 4:Get player by Name  5:Get All Players");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Player p = new Player();
+                        Console.Write("Enter Player Id : ");
+                        p.PlayerId = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Enter Player Name : ");
+                        p.PlayerName = Console.ReadLine();
+                        Console.Write("Enter Player Age : ");
+                        p.PlayerAge = Convert.ToInt32(Console.ReadLine());
+                        o.Add(p);
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter player Id to Remove");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        o.Remove(a);
+                        break;
+                    case 3:
+                        Player p1 = new Player();
+                        Console.WriteLine("Enter the player Id to know the player Details");
+                        int b = Convert.ToInt32(Console.ReadLine());
+
+                        p1 = o.GetPlayerById(b);
+                        Console.WriteLine("Player Id : "+p1.PlayerId);
+                        Console.WriteLine("Player Name : "+p1.PlayerName);
+                        Console.WriteLine("Player Age : "+p1.PlayerAge);
+                        Console.WriteLine(" ");
+                        break;
+                    case 4:
+                        Player p2 = new Player();
+                        Console.WriteLine("Enter the player Name to know the player Details");
+                        string b1 = Console.ReadLine();
+
+                        p2 = o.GetPlayerByName(b1);
+                        Console.WriteLine(p2.PlayerAge);
+                        Console.WriteLine(p2.PlayerName);
+                        Console.WriteLine(p2.PlayerAge);
+                        Console.WriteLine(" ");
+                        break;
+                    case 5:
+                       List<Player> list = new List<Player>();
+                        list=o.GetAllPlayers();
+                        foreach (var item in list)
+                        {
+                            Console.WriteLine("Player Id : "+item.PlayerId);
+                            Console.WriteLine("Player Name : "+item.PlayerName);
+                            Console.WriteLine("Player Age : "+item.PlayerAge);
+                            Console.WriteLine(" ");
+
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Incoorect option ");
+                        
+                        break;
+                }
+
+
+                        Console.WriteLine("Do yo want to continue yes/no ?");
+                        string s = Console.ReadLine();
+                        if (s == "yes")
+                        {
+                            loop = false;
+                        }
+                        else if(s== "no")
+                        {
+                            loop = true;
+                        }
+                else
+                {
+                    Console.WriteLine("Invalid Input");
+                    loop = true;
+                }
+            } while (!loop);
+
+
+            Console.WriteLine("Thanlyou,Loop ended");
+
+
+            Console.ReadLine();
+        }
+    }
+}
+
+--------------------------------------------------------------OneDayTeam.cs------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PlayerandTeam
+{
+    class OneDayTeam:ITeam
+    {
+        public static List<Player> oneDayTeam = new List<Player>();
+        public int count = 0;
+
+        private int _capacity;
+
+        public int capacity
+        {
+            get { return _capacity; }
+            set { _capacity = value; }
+        }
+        public OneDayTeam()
+        {
+            capacity = 11;
+        }
+        public void Add(Player player)
+        {
+            if (count < capacity)
+            {
+                oneDayTeam.Add(player);
+                Console.WriteLine("Player Added Successfully");
+                Console.WriteLine(" ");
+                count++;
+                
+
+
+            }
+            else
+            {
+                Console.WriteLine("Sorry,Player is not able to add because the maximum limit to add Player is 11,you have exceeded the Limit");
+                Console.WriteLine(" ");
+            }
+
+
+        }
+
+        public void Remove(int PlayerId)
+        {
+            var rem = oneDayTeam.Find(a => a.PlayerId==PlayerId);
+            if (rem!=null)
+            {
+                oneDayTeam.Remove(rem);
+                Console.WriteLine("Player Removed Successfully");
+                Console.WriteLine(" ");
+                count--;
+                
+               
+            }
+            else
+            {
+                Console.WriteLine($"Player is not found for ur given playerId{PlayerId}");
+                Console.WriteLine(" ");
+
+            }
+
+
+
+
+
+        }
+       public Player GetPlayerById(int PlayerId)
+        {
+            var getid = oneDayTeam.Find(a => a.PlayerId == PlayerId);
+            if(getid!=null)
+            {
+                Console.WriteLine("Player Found");
+                Console.WriteLine(" ");
+                return getid;
+                
+            }
+            else
+            {
+                Console.WriteLine($"player details  not found for your given player Id:{PlayerId}");
+                Console.WriteLine(" ");
+                return null;
+            }
+
+
+        }
+
+        public Player GetPlayerByName(string PlayerName)
+        {
+
+            var getname = oneDayTeam.Find(a => a.PlayerName==PlayerName);
+            if (getname != null)
+            {
+                Console.WriteLine("Player Found");
+                Console.WriteLine(" ");
+                return getname;
+
+            }
+         
+            else
+            {
+                Console.WriteLine($"player details  not found for your given player Name:{PlayerName}");
+                Console.WriteLine(" ");
+                return null;
+                
+            }
+
+        }
+
+        public List<Player> GetAllPlayers()
+        {
+
+            return oneDayTeam;
+        }
+    }
+}
+
+----------------------------------------------------------------------ITeam.cs-------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PlayerandTeam
+{
+  public  interface ITeam
+    {
+        void Add(Player player);
+
+        void Remove(int Id);
+
+        Player GetPlayerById(int PlayerId);
+
+        Player GetPlayerByName(string PlayerName);
+
+       List<Player> GetAllPlayers();
+    }
+}
