@@ -1,0 +1,8 @@
+C:\Users\brother\source\repos\PlayerandTeam\bin\Debug\PlayerandTeam.exe.config
+C:\Users\brother\source\repos\PlayerandTeam\bin\Debug\PlayerandTeam.exe
+C:\Users\brother\source\repos\PlayerandTeam\bin\Debug\PlayerandTeam.pdb
+C:\Users\brother\source\repos\PlayerandTeam\obj\Debug\PlayerandTeam.csproj.AssemblyReference.cache
+C:\Users\brother\source\repos\PlayerandTeam\obj\Debug\PlayerandTeam.csproj.SuggestedBindingRedirects.cache
+C:\Users\brother\source\repos\PlayerandTeam\obj\Debug\PlayerandTeam.csproj.CoreCompileInputs.cache
+C:\Users\brother\source\repos\PlayerandTeam\obj\Debug\PlayerandTeam.exe
+C:\Users\brother\source\repos\PlayerandTeam\obj\Debug\PlayerandTeam.pdb
